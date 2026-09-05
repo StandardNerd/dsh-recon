@@ -1,0 +1,26 @@
+{
+  "name": "dsh-form-recon",
+  "version": "0.1.0",
+  "description": "DSH plugin: log into a web app, crawl and analyze its forms, and generate requirements-engineering artifacts (JSON Schema, user stories, VECS docs).",
+  "type": "module",
+  "main": "dist/adapter/dsh-plugin.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "cli": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
+  },
+  "dsh": {
+    "plugin": true,
+    "tools": [
+      "form_recon.run"
+    ]
+  }
+}
